@@ -1,0 +1,33 @@
+<ion-view view-title="Авторизации">
+    <ion-content class="padding">
+        <div class="list padding auth-wrapper">
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Email</span>
+                <br>
+                <div class="auth-icon-input-wrapper">
+                    <i class="ion-android-mail auth-icon-size"></i>
+                    <input type="text" placeholder="Введите вашу почту" ng-model="authorization.email">
+                </div>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Пароль</span>
+                <br>
+                <div class="reg-icon-input-wrapper">
+                    <img src="img/lock1.png" class="reg-img-size">
+                    <input type="text" placeholder="******" ng-model="authorization.password">
+                </div>
+            </label>
+        </div>
+        <div class="auth-button-wrapper">
+            <button class="button button-energized" ng-click="authorizationFunction()">
+                Авторизоваться
+            </button>
+        </div>
+        <div class="forgot-password" ng-click="goToForgotPassword()">
+            <span>Забыли пароль</span>
+        </div>
+        <div class="reg-link" ng-click="goToRegistration()">
+            <span>Еще нет аккаунта?</span>
+        </div>
+    </ion-content>
+</ion-view>

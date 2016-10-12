@@ -1,0 +1,35 @@
+<ion-view view-title="Регистрация">
+    <ion-content class="padding">
+        <div class="list padding reg-wrapper">
+            <label class="item item-input item-stacked-label">
+                <span class="input-label reg-label">Имя</span>
+                <br>
+                <div class="reg-icon-input-wrapper">
+                    <i class="ion-person reg-icon-size"></i>
+                    <input type="text" placeholder="Андрей Иванович" ng-model="registration.name">
+                </div>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Email</span>
+                <br>
+                <div class="reg-icon-input-wrapper">
+                    <i class="ion-android-mail reg-icon-size"></i>
+                    <input type="text" placeholder="Введите вашу почту" ng-model="registration.email">
+                </div>
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Пароль</span>
+                <br>
+                <div class="reg-icon-input-wrapper">
+                    <img src="img/lock1.png" class="reg-img-size">
+                    <input type="text" placeholder="******" ng-model="registration.password">
+                </div>
+            </label>
+        </div>
+        <div class="reg-button-wrapper">
+            <button class="button button-energized contacts-button" ng-click="registrationFunction()">
+                Зарегистрироваться
+            </button>
+        </div>
+    </ion-content>
+</ion-view>
