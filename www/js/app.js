@@ -29,10 +29,6 @@ var lectures = angular.module('starter', ['ionic'])
 
     APP: '/app',
 
-   /* REG: '/registration',
-    AUTH: '/authorization',
-    FORGOTPASSORD: '/forgot_password',*/
-
     TENDERS: '/tenders',
 
     LESSONS: '/lessons',
@@ -63,45 +59,6 @@ var lectures = angular.module('starter', ['ionic'])
     templateUrl: tpl + 'menu.html',
     controller: 'TendersCtrl'
   })
-
-    /*.state('app.registration', {
-    url: ROUTES.REG,
-    cache: false,
-    views: {
-      cache: false,
-      'menuContent': {
-        cache: false,
-        templateUrl: tpl + 'registration.html',
-        controller: 'AuthRegCtrl'
-      }
-    }
-  })
-
-    .state('app.authorization', {
-    url: ROUTES.AUTH,
-    cache: false,
-    views: {
-      cache: false,
-      'menuContent': {
-        cache: false,
-        templateUrl: tpl + 'authorization.html',
-        controller: 'AuthRegCtrl'
-      }
-    }
-  })
-
-    .state('app.forgot_password', {
-    url: ROUTES.FORGOTPASSORD,
-    cache: false,
-    views: {
-      cache: false,
-      'menuContent': {
-        cache: false,
-        templateUrl: tpl + 'forgot_password.html',
-        controller: 'AuthRegCtrl'
-      }
-    }
-  })*/
 
   .state('app.tenders', {
     url: ROUTES.TENDERS,
@@ -155,18 +112,6 @@ var lectures = angular.module('starter', ['ionic'])
       }
     })
 
-  .state('app.video_description', {
-      url: ROUTES.VIDEODESCRIPTION,
-      cache: false,
-      views: {
-        cache: false,
-        'menuContent': {
-          cache: false,
-          templateUrl: tpl + 'video_description.html',
-        }
-      }
-    })
-
   .state('app.special_lessons', {
       url: ROUTES.SPECIALLESSONS,
       cache: false,
@@ -176,18 +121,6 @@ var lectures = angular.module('starter', ['ionic'])
           cache: false,
           templateUrl: tpl + 'special_lessons.html',
           controller: 'SpecialLessonsCtrl'
-        }
-      }
-    })
-
-  .state('app.special_description', {
-      url: ROUTES.SPECIALDESCRIPTION,
-      cache: false,
-      views: {
-        cache: false,
-        'menuContent': {
-          cache: false,
-          templateUrl: tpl + 'special_description.html',
         }
       }
     })

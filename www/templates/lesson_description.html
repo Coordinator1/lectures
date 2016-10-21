@@ -1,12 +1,10 @@
-<ion-view view-title="{{descriptionLesson.name}}">
+<ion-view view-title="Бесплатный курс">
     <ion-content class="info-project">
         <div class="sub-header">
             <h4 class="sub-header-title">{{descriptionLesson.name}}</h4>
         </div>
         <div class="description-wrapper">
-            <p>
-            	{{descriptionLesson.description}}
-            </p>
+            <p ng-bind-html="descriptionLesson.description"></p>
         </div>
     </ion-content>
 </ion-view>

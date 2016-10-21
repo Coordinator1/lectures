@@ -1,5 +1,4 @@
 lectures.controller('TendersCtrl', function($scope, $state, $ionicPopup){
-
 	// Path to free lessons
 	$scope.goToFreeLessons = function(){
 		$state.go("app.lessons");
@@ -29,5 +28,4 @@ lectures.controller('TendersCtrl', function($scope, $state, $ionicPopup){
 	$scope.goToFaq = function(){
 		$state.go('app.faq');
 	};
-
 });

@@ -1,25 +1,12 @@
-<ion-view view-title="Видео-уроки">
+<ion-view view-title="Видео - уроки">
     <ion-content class="padding">
-        <!-- <ul class="list padding">
-            <li class="item list-item" style="" ng-repeat="lesson in videoList" ng-class-odd="'list-odd'" ng-class-even="'list-even'">
-                <div class="row list-row" ng-click="showAlert()">
-                    <div class="col col-10 list-left-col">
-                        <span class="video-list-id">{{ lesson.id }}</span>
-                    </div>
-                    <div class="col col-90">
-                        <span class="video-list" style="white-space: pre-wrap; ">{{lesson.name}}</span>
-                        <img src="img/lock2.png" class="icon-align" width="5%">
-                    </div>
-                </div>
-            </li>
-        </ul> -->
         <ul class="list padding">
             <li class="item list-item" style="" ng-repeat="lesson in videoList" ng-class-odd="'list-odd'" ng-class-even="'list-even'">
                 <div class="row list-row" ng-click="showAlert()">
                     <div class="col col-20 left-col">
-                        <span class="list-id">{{ lesson.id }}</span>
+                        <span class="list-id">{{ lesson.number }}</span>
                     </div>
-                    <div class="col col-90">
+                    <div class="col right-col">
                         <span class="video-list" style="white-space: pre-wrap; ">{{lesson.name}}</span>
                         <img src="img/lock2.png" class="icon-align" width="5%">
                     </div>

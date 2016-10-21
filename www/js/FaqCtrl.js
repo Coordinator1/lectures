@@ -1,4 +1,4 @@
-lectures.controller('FaqCtrl', function($scope, $ionicModal, CommunicationWithServerService, $rootScope) {
+lectures.controller('FaqCtrl', function($scope, $ionicModal, CommunicationWithServerService, $rootScope, $ionicPopup) {
 
     $ionicModal.fromTemplateUrl('templates/modals/faq_modal.html', {
         scope: $scope,
@@ -18,13 +18,38 @@ lectures.controller('FaqCtrl', function($scope, $ionicModal, CommunicationWithSe
         console.log("$scope.faqList", data);
     }).finally(function(error) {});
 
+    // object takes a value from the ng-model 
     $rootScope.faq = {};
+
+    $scope.checkInput = function(){
+        if($scope.faq.username == undefined || $scope.faq.email == undefined 
+            || $scope.faq.title == undefined || $scope.faq.question == undefined){
+            var alertPopup = $ionicPopup.alert({
+                    title: 'Внимание',
+                    template: 'Заполните все поля!'
+                });
+        } else {
+            $scope.sendFaqQuestion();
+        }
+    };
+    
+    // function to send data from a modal window
     $scope.sendFaqQuestion = function() {
         CommunicationWithServerService.sendQuestion().then(function(data) {
             console.log("sendQuestion()", data);
-        }).finally(function(error) {});
-    }
 
+            if (data.status == 200) {
+                // An alert dialog
+                var alertPopup = $ionicPopup.alert({
+                    title: 'Сообщение',
+                    template: 'Ваш вопрос отправлен'
+                });
+            }
+        }).finally(function(error) {
+            $scope.closeModalFaq();
+            $rootScope.faq = {};
+        });
+    };
 
     /*
      * if given answer is the selected answer, deselect it
